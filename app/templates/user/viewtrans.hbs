@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="container-header">
+        Transactions
+    </div>
+    <div class="container-body">
+        {{#if model.error}}
+            Something went wrong
+        {{/if}}
+        {{#each model as |transaction|}}
+        <div class="transaction-box">
+            <p>Transaction id: {{transaction.id}}</p>
+            <p>Source Account Number: {{transaction.src}}</p>
+            <p>Destination Account Number: {{transaction.dest}}</p>
+            <p>Amount: {{transaction.amount}}</p>
+            <p>Date: {{transaction.date}}</p>
+            <p>Time: {{transaction.time}}</p>
+        </div>
+        {{/each}}
+    </div>
+    {{#link-to "user.usermenu" class="link"}}
+        <div class="home-btn">
+                Menu Page
+        </div>
+    {{/link-to}}
+</div>
+{{outlet}}

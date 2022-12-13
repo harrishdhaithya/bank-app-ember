@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="container-header">
+        Make Transaction
+    </div>
+    <div class="search-box">
+        <div class="form-name">
+            <form name="maketransaction" onsubmit={{action "makeTransaction"}}>
+                <div class="form-name">
+                    <div>Account Number: </div>
+                    <input type="text" name="accno" id="accno" class="form-text-box" required>
+                </div>
+                <div class="form-name">
+                    <div>Amount: </div>
+                    <input type="text" name="amount" id="amount" class="form-text-box" required>
+                </div>
+                <input type="submit" value="Make Transaction" class="form-submit-btn">
+            </form>
+        </div>
+    </div>
+    {{#link-to "user.usermenu" class="link"}}
+        <div class="home-btn">
+            Menu
+        </div>
+    {{/link-to}}
+</div>
+
+{{outlet}}

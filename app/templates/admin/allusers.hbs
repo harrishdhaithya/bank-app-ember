@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="container-header">
+        View All Users
+    </div>
+    <div class="container-body">
+        {{#each model as |user|}}
+            <div class="user-box">
+                <p>Account Number: {{user.accno}}</p> 
+                <p>Name: {{user.name}}</p>
+                <p>Email: {{user.email}}</p>
+                <p>Phone Number: {{user.phone}}</p>
+                <p>Balance: {{user.balance}}</p>
+            </div>
+        {{/each}}
+        {{#link-to "admin.admin-menu" class="link"}}
+            <div class="home-btn">
+                Admin Home
+            </div>
+        {{/link-to}}
+    </div>
+</div>
+{{outlet}}

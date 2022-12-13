@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="container-header">
+        Admin Home
+    </div>
+    <div class="container-body">
+        {{#link-to "admin.allusers" class="link"}}
+            <div class="container-btn">
+                View all Users
+            </div>
+        {{/link-to}}
+        {{#link-to "admin.searchuser" class="link"}}
+            <div class="container-btn">
+                Search User
+            </div>
+        {{/link-to}}
+        {{#link-to "admin.alltransactions" class="link"}}
+            <div class="container-btn">
+                View all Transactions
+            </div>
+        {{/link-to}}
+        {{#link-to "admin.transbyaccno" class="link"}}
+            <div class="container-btn">
+                Search Transactions By Accno
+            </div>
+        {{/link-to}}
+        {{#link-to "admin.transbydate" class="link"}}
+            <div class="container-btn">
+                Search Transactions By Date
+            </div>
+        {{/link-to}}
+        {{#link-to "admin.exttrans" class="link"}}
+            <div class="container-btn">
+                Extract Transaction
+            </div>
+        {{/link-to}}
+    </div>
+</div>
+{{outlet}}

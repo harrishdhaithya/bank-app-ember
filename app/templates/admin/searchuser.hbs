@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="container-header">
+        Search User
+    </div>
+    <div class="search-box">
+        <div class="form-name">
+            <form name="searchtransaction" onsubmit={{action "getUser"}}>
+                <div class="form-name">
+                    <div>Account Number: </div>
+                    <input type="text" name="accno" id="accno" class="form-text-box" required>
+                </div>
+                <input type="submit" value="Search" class="form-submit-btn">
+            </form>
+            {{#if user}}
+                <div class="user-box">
+                    <div>Account Number: {{user.accno}}</div>
+                    <div>Name: {{user.name}}</div>
+                    <div>Phone: {{user.phone}}</div>
+                    <div>Email: {{user.email}}</div>
+                    <div>Balance: {{user.balance}}</div>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+    {{#link-to "admin.admin-menu" class="link"}}
+        <div class="home-btn">
+            Admin Home
+        </div>
+    {{/link-to}}
+</div>
+
+{{outlet}}

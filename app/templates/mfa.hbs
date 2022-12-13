@@ -1,0 +1,15 @@
+<div class="container">
+        <div class="container-header">
+            Authenticator
+        </div>
+        <div class="container-body">
+            <form onsubmit={{action "evalAuth"}}>
+                <div class="form-name">
+                    <div>Open you Authenticator app and enter the 6 digit code:</div>
+                    <input type="text" name="code" id="code" class="form-text-box" required>
+                </div>
+                <input type="submit" class="form-submit-btn">
+            </form>
+        </div>
+    </div>
+{{outlet}}

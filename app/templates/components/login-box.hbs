@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="container-header">
+        Login
+    </div>
+    <div class="container-body">
+        <form onsubmit={{action "login"}}>
+            <div class="form-name">
+                <div>Email:</div>
+                <input type="text" name="email" id="email" class="form-text-box" required>
+            </div>
+            <div class="form-name">
+                <div>Password:</div>
+                <input type="password" name="password" id="password" class="form-text-box" required>
+            </div>
+            <input type="submit" class="form-submit-btn" />
+        </form>
+        {{#link-to "home-route" class="link"}}
+            <div class="home-btn">
+                Home
+            </div>
+        {{/link-to}}
+    </div>
+</div>
+{{yield}}

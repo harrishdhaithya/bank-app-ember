@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="container-header">
+        Welcome
+    </div>
+    <div class="container-body">
+        {{#link-to "login-route" class="link"}}
+            <div class="container-btn">
+                Login
+            </div>
+        {{/link-to}}
+        {{#link-to "signup-route" class="link"}}
+            <div class="container-btn">
+                User Signup
+            </div>
+        {{/link-to}}
+    </div>
+</div>
+{{yield}}

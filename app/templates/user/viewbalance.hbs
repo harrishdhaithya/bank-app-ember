@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="container-header">
+        View Balance
+    </div>
+    <div class="container-body">
+        <div class="user-box">
+            <p>Account Number: {{model.accno}}</p> 
+            <p>Name: {{model.name}}</p>
+            <p>Email: {{model.email}}</p>
+            <p>Phone Number: {{model.phone}}</p>
+            <p>Balance: {{model.balance}}</p>
+        </div>
+    </div>
+    {{#link-to "user.usermenu" class="link"}}
+        <div class="home-btn">
+            Menu
+        </div>
+    {{/link-to}}
+</div>
+{{outlet}}

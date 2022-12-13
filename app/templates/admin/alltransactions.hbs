@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="container-header">
+        View All Transactions
+    </div>
+    <div class="container-body">
+    {{#if model}}
+        {{#each model as |trans|}}
+            <div class="transaction-box">
+                <p>Transaction id: {{trans.id}}</p>
+                <p>Source Account Number: {{trans.src}}</p>
+                <p>Destination Account Number: {{trans.dest}}</p>
+                <p>Amount: {{trans.amount}}</p>
+                <p>Date: {{trans.date}}</p>
+                <p>Time: {{trans.time}}</p>
+            </div>
+        {{/each}}
+    {{else}}
+        <div class="transaction-box">
+            No Transactions Found
+        </div>
+    {{/if}}
+        {{#link-to "admin.admin-menu" class="link"}}
+            <div class="home-btn">
+                Admin Home
+            </div>
+        {{/link-to}}
+    </div>
+</div>
+{{outlet}}

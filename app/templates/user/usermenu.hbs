@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="container-header">
+        User Home
+    </div>
+    <div class="container-body">
+        {{#link-to "user.viewbalance" class="link"}}
+            <div class="container-btn">
+                View Balance
+            </div>
+        {{/link-to}}
+        {{#link-to "user.viewtrans" class="link"}}
+            <div class="container-btn">
+                View Transactions
+            </div>
+        {{/link-to}}
+        {{#link-to "user.transaction" class="link"}}
+            <div class="container-btn">
+                Make Transaction
+            </div>
+        {{/link-to}}
+        {{#link-to "user.withdraw" class="link"}}
+            <div class="container-btn">
+                Withdraw
+            </div>
+        {{/link-to}}
+    </div>
+</div>
+{{outlet}}

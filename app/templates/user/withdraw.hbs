@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="container-header">
+        Withdraw Amount
+    </div>
+    <div class="search-box">
+        <div class="form-name">
+            <form name="searchtransaction" onsubmit={{action "withdraw"}}>
+                <div class="form-name">
+                    <div>Amount: </div>
+                    <input type="text" name="amount" id="amount" class="form-text-box" required>
+                </div>
+                <input type="submit" value="Withdraw" class="form-submit-btn">
+            </form>
+        </div>
+    </div>
+    {{#link-to "user.usermenu" class="link"}}
+        <div class="home-btn">
+            Menu
+        </div>
+    {{/link-to}}
+</div>
+
+{{outlet}}

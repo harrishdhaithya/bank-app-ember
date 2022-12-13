@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="container-header">
+        Authenticator
+    </div>
+    <div class="container-body">
+        <form onsubmit={{action "verifyOTP"}}>
+            <div class="form-name">
+                <div>Enter 4 digit OTP from your mail</div>
+                <input type="text" name="otp" id="otp" class="form-text-box" required>
+            </div>
+            <input type="submit" class="form-submit-btn">
+        </form>
+    </div>
+</div>
+{{outlet}}

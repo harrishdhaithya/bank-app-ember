@@ -1,5 +1,5 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
+{{#if loading.isLoading}}
+    <div class="loading-screen"></div>
+{{/if}}
+{{nav-bar}}
 {{outlet}}

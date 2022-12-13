@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="container-header">
+        Transaction By Date
+    </div>
+    <div class="search-box">
+        <div class="form-name">
+            <form name="searchtransaction" onsubmit={{action "searchByDate"}}>
+                <div class="form-name">
+                    <div>Date: </div>
+                    <input type="date" name="date" id="date" class="form-text-box" required>
+                </div>
+                <input type="submit" value="Search" class="form-submit-btn">
+            </form>
+        </div>
+    </div>
+    {{#if transactions}}
+        <div class="container-body">
+            {{#each transactions as |trans|}}
+                <div class="transaction-box">
+                    <p>Transaction id: {{trans.id}}</p>
+                    <p>Source Account Number: {{trans.src}}</p>
+                    <p>Destination Account Number: {{trans.dest}}</p>
+                    <p>Amount: {{trans.amount}}</p>
+                    <p>Date: {{trans.date}}</p>
+                    <p>Time: {{trans.time}}</p>
+                </div>
+            {{/each}}
+        </div>
+    {{/if}}
+    {{#link-to "admin.admin-menu" class="link"}}
+        <div class="home-btn">
+            Home
+        </div>
+    {{/link-to}}
+</div>
+{{outlet}}
